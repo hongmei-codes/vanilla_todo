@@ -1,0 +1,116 @@
+/* General page styles */
+/* use global selector '*' to remove browser default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* defult box-sizing value is content-box
+    content-box: size of element = content + border + padding...
+    boarder-box: size of element = specified width (e.g. content + border + padding = specified 300px
+    */
+}
+/* set the background the main font */
+body {
+  background-color: rgb(238, 74, 55);
+  background-image: linear-gradient(
+    to right,
+    rgb(165, 28, 123),
+    rgb(238, 74, 55)
+  );
+  background-repeat: repeat-y;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 1.5rem;
+}
+/* to centralise contents */
+header,
+form {
+  min-height: 20vh;
+  display: flex; /* css flex box */
+  justify-content: center;
+  /* to understande justify-content go to:
+    https://www.w3schools.com/csSref/playit.asp?filename=playcss_justify-content&preval=flex-start
+    */
+  align-items: center;
+  /* to understand align-items go to:
+    https://www.w3schools.com/csSref/playit.asp?filename=playcss_align-items&preval=initial
+    */
+}
+
+/* Styling the Add todo item secion */
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  background: white;
+}
+/* adding styles to form button */
+form button {
+  color: purple;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+form button:hover {
+  background: purple;
+  color: white;
+}
+
+/* Styling todo item section */
+.todos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todos {
+  min-width: 30%;
+  list-style: none;
+}
+.item {
+  margin: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+.item li {
+  flex: 1;
+}
+.done-button {
+  background: mediumseagreen;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.delete-button {
+  background: dodgerblue;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.title {
+  padding: 0rem 0.5rem;
+}
+.fa-check,
+.fa-trash {
+  /* to make the icon unclickable
+       so that the whole of the button is clickable
+    */
+  pointer-events: none;
+}
+.completed {
+    text-decoration: line-through;
+    background: grey;
+    opacity: 0.6;
+}
