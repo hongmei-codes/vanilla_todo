@@ -1,4 +1,4 @@
-// SELECTORS
+// DOM Elements
 // @@shortcut: shift, alt, down arrow -> dulicate current line
 const todoInput = document.querySelector(".todo-input");
 const addButton = document.querySelector(".add-button");

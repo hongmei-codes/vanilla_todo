@@ -43,6 +43,7 @@ form {
   /* to understand align-items go to:
     https://www.w3schools.com/csSref/playit.asp?filename=playcss_align-items&preval=initial
     */
+  flex-direction: column;
 }
 /* to remove default blue border when boxes/icons are clicked */
 form input:focus,
@@ -108,7 +109,7 @@ select {
   color: white;
   background: purple;
   border-radius: 0px 5px 5px 0px;
-  top: 1%;
+  top: 0;
   right: 0;
   padding: 0.6rem;
   pointer-events: none;
