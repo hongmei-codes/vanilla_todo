@@ -1,4 +1,4 @@
-/* General page styles */
+/****General page styles****/
 /* use global selector '*' to remove browser default styles */
 * {
   margin: 0;
@@ -9,26 +9,31 @@
     boarder-box: size of element = specified width (e.g. content + border + padding = specified 300px
     */
 }
-/* set the background the main font */
+/* set the background and main font */
 body {
-  background-color: rgb(238, 74, 55);
-  background-image: linear-gradient(
-    to right,
-    rgb(165, 28, 123),
-    rgb(238, 74, 55)
-  );
-  background-repeat: repeat-y;
+  background: #f7cac9;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #f7cac9 0%, #92a8d1 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #f7cac9 0%, #92a8d1 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #f7cac9 0%, #92a8d1 100%);
   color: white;
   font-family: "Montserrat", sans-serif;
   min-height: 100vh;
 }
 header {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.02), 2px 2px rgba(0, 0, 0, 0.02),
+    3px 3px rgba(0, 0, 0, 0.02), 4px 4px rgba(0, 0, 0, 0.02),
+    5px 5px rgba(0, 0, 0, 0.02), 6px 6px rgba(0, 0, 0, 0.02),
+    7px 7px rgba(0, 0, 0, 0.02);
 }
 /* to centralise contents */
 header,
 form {
-  min-height: 20vh;
+  min-height: 10vh;
   display: flex; /* css flex box */
   justify-content: center;
   /* to understande justify-content go to:
@@ -39,14 +44,26 @@ form {
     https://www.w3schools.com/csSref/playit.asp?filename=playcss_align-items&preval=initial
     */
 }
+/* to remove default blue border when boxes/icons are clicked */
+form input:focus,
+form,
+button:focus,
+.done-button:focus,
+.delete-button:focus,
+select {
+  outline: none;
+}
 
-/* Styling the Add todo item secion */
+/****Styling the Add todo item section****/
 form input,
 form button {
   padding: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   border: none;
   background: white;
+}
+form input {
+  border-radius: 5px 0px 0px 5px;
 }
 /* adding styles to form button */
 form button {
@@ -54,13 +71,57 @@ form button {
   background: white;
   cursor: pointer;
   transition: all 0.3 ease;
+  border-radius: 0px 5px 5px 0px;
 }
 form button:hover {
   background: purple;
   color: white;
 }
 
-/* Styling todo item section */
+/****Styling filter todo item section****/
+/* remove default style */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  /* add custom styling */
+  color: white;
+  background-color: purple;
+  width: 10rem;
+  cursor: pointer;
+  padding: 0.7rem;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+/* positioning the select div */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+/* add arrow back */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  color: white;
+  background: purple;
+  border-radius: 0px 5px 5px 0px;
+  top: 1%;
+  right: 0;
+  padding: 0.6rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+/* add hover effect */
+.select:hover::after {
+  background: white;
+  color: purple;
+}
+
+
+/*****Styling todo items section*****/
 .todos-container {
   display: flex;
   justify-content: center;
@@ -72,7 +133,7 @@ form button:hover {
 }
 .item {
   margin: 0.5rem;
-  background: white;
+  background: lightcyan;
   color: black;
   font-size: 1.5rem;
   display: flex;
@@ -105,12 +166,13 @@ form button:hover {
 .fa-check,
 .fa-trash {
   /* to make the icon unclickable
-       so that the whole of the button is clickable
-    */
+    so that the whole of the button is clickable
+    not just the portion not filled by icon
+  */
   pointer-events: none;
 }
 .completed {
-    text-decoration: line-through;
-    background: grey;
-    opacity: 0.6;
+  text-decoration: line-through;
+  background: grey;
+  opacity: 0.6;
 }

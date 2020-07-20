@@ -30,18 +30,29 @@
     <header>
       <h1>✅ Todo List</h1>
     </header>
+    <!-- Page Header -->
 
-    <!-- Add todo item section-->
+    <!-- Add todo item section -->
     <form>
       <input type="text" class="todo-input" placeholder="Add todo..."/>
       <button class="add-button">
         <i class="fas fa-plus-circle"></i>
       </button>
+      <!-- Filter todo item section-->
+      <div class="select">
+        <select name="todos" class="filter-todo">
+          <option value="all">All</option>
+          <option value="done">Done</option>
+          <option value="not-done">Not done</option>
+        </select>
+      </div>
+      <!-- Filter todo item section-->
     </form>
+    <!-- Add todo item section -->
 
     <!-- Display todo items section-->
     <div class="todos-container">
-      <ul class="todos">
+        <!-- todo items will be added into the ul tag by js functions-->
         <!-- Structure of a basic todo item -->
         <!-- 
             <div class="item">
@@ -50,12 +61,15 @@
                 <button class="delete-button"><i class="fas fa-trash"></i></button>
             </div>
         -->
+      <ul class="todos">
       </ul>
     </div>
+    <!-- Display todo items section-->
 
     <!-- Add js script-->
     <!-- put script at bottom of the <body> element improves the display speed, 
         because script interpretation slows down the display-->
     <script src="app.js"></script>
+    <!-- Add js script-->
   </body>
 </html>
