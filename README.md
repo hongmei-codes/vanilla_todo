@@ -10,25 +10,25 @@ This is a simple todo web app built with vanilla JavaScript. No frameworks were 
 
 ## Add a todo item to todo list
 
-![add item]()
+![add item](https://github.com/hongmei-codes/vanilla_todo/blob/master/demo/add.gif)
 
 Add item to your todo list by clicking the add button.
 
 ## Mark todo item as done
 
-![mark item as done]()
+![mark item as done](https://github.com/hongmei-codes/vanilla_todo/blob/master/demo/mark.gif)
 
 Mark todo item as done by clicking the green check mark.
 
 ## Delete todo item from todo list
 
-![delete items]()
+![delete items](https://github.com/hongmei-codes/vanilla_todo/blob/master/demo/delete.gif)
 
 Remove todo item from list by clicking the trash can icon.
 
 ## Filter todo items by category
 
-![filter items]()
+![filter items](https://github.com/hongmei-codes/vanilla_todo/blob/master/demo/sort.gif)
 
 Filter your todo items by their completion status.
 
