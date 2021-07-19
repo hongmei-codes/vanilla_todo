@@ -64,15 +64,15 @@ form button {
   background: white;
 }
 form input {
-  border-radius: 5px 0px 0px 5px;
+  border-radius: 8px 0px 0px 8px;
 }
 /* adding styles to form button */
 form button {
   color: purple;
   background: white;
   cursor: pointer;
-  transition: all 0.3 ease;
-  border-radius: 0px 5px 5px 0px;
+  transition: all 0.3s ease;
+  border-radius: 0px 8px 8px 0px;
 }
 form button:hover {
   background: purple;
